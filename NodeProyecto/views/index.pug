@@ -1,0 +1,36 @@
+extends layout
+
+block content
+	script
+		contacto = require('../model/contacto');
+	div(class="page-header")
+		h1 Contacto
+	div(class="row")
+		div(class="col-md-10")
+			h2 Lista de Contactos
+			table(class="table table-hover")
+				thead
+					tr
+						th ID
+						th Nombre
+						th Apellido
+						th Direccion
+						th Telefono
+						th Correo
+						th Categoria
+						th Opciones
+				tbody(data-bind="foreach: contacto")
+					tr
+						td(data-bind="text: idContacto")
+						td(data-bind="text: nombre")
+						td(data-bind="text: apellido")
+						td(data-bind="text: direccion")
+						td(data-bind="text: telefono")
+						td(data-bind="text: correo")
+						td(data-bind="text: idCategoria")
+						td
+							div(class="btn-group")
+								button(class="btn btn-warning") Editar
+								button(class="btn btn-danger") Eliminar
+
+	button(class="btn btn-primary") Agregar
