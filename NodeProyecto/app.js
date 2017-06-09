@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var categoriaRoute = require('./routes/categoriaRoute');
 var usuarioRoute = require('./routes/usuarioRoute');
 var contactoRoute = require('./routes/contactoRoute');
 var usuarioDetalleRoute = require('./routes/usuarioDetalleRoute');
